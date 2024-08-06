@@ -1,23 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { Login } from './componets/login/login';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <BrowserRouter>
+    <header>
+    <h1>shopper</h1>
+      <nav>
+     <Link to='/'>home</Link><span>|</span>
+     <Link to='kids'>Kids</Link><span>|</span>
+     <Link to='login'>login</Link><span>|</span>
+     <Link to='*'>men</Link>
+
+     <hr></hr>
+      </nav>
+    </header>
+      <Routes>
+      <Route  path='/' element={<><h2>Home</h2><p>Year and sale</p></>}></Route>
+      <Route path='kids' element={<><h2>Kids Fashion</h2><p>30% off </p></>}></Route>
+      <Route path='men' element={<><h2>This is men Fashion</h2><p>shoes shirt</p></>}></Route>
+      <Route path='login' element={<Login></Login>}></Route>
+     <Route path='*' element={<><h2>Not found</h2></>}></Route>
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
