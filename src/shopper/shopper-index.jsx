@@ -19,7 +19,7 @@ export function ShopperIndex(){
           <Route path="details/:id" element={<Details />} />
         </Route>
         <Route path="login" element={<Login/>}></Route>
-        <Route path="success" element={<Success/>}></Route>
+        <Route path="success/:uname" element={<Success/>}></Route>
         <Route path="invalid" element={<Invalid/>}></Route>
                
             </Routes>

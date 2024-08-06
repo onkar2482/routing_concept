@@ -13,8 +13,8 @@ export function Login(){
 
 
     function handleloginclick(){
-        if(Username==="admin"){
-            navigate("/success")
+        if(Username==="John"){
+            navigate(`/success/${Username}`)
 
         }else{
                 navigate("/invalid")
