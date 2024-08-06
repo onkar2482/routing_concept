@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./home";
 import { Products } from "./products";
 import { Details } from "./details";
+import { Login } from "./login";
+import { Invalid } from "./invalid";
+import { Success } from "./success";
 
 export function ShopperIndex(){
     return(
@@ -15,6 +18,9 @@ export function ShopperIndex(){
         <Route path="/products/:category" element={<Products />}>
           <Route path="details/:id" element={<Details />} />
         </Route>
+        <Route path="login" element={<Login/>}></Route>
+        <Route path="success" element={<Success/>}></Route>
+        <Route path="invalid" element={<Invalid/>}></Route>
                
             </Routes>
             </BrowserRouter>
