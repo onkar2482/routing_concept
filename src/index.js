@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ShopperIndex } from './shopper/shopper-index';
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.css";
+import { CookiesProvider } from 'react-cookie';
+import { TutorialIndex } from './video-tutorial-project/video-tutorial-index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <ShopperIndex />
+  <CookiesProvider>
+  <TutorialIndex />
+  </CookiesProvider>
   </React.StrictMode>
 );
 
